@@ -16,10 +16,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: 'localhost',
-    port: 5173
+    host: 'https://server-shopify-hscc.onrender.com',
   },
   build: {
-    outDir: 'public',  // Change 'dist' to 'build' or whatever you like
+    outDir: './dist',
+    emptyOutDir: true,
   },
+  publicDir: 'public',
 });

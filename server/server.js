@@ -8,6 +8,9 @@ import { CloudinaryStorage } from 'multer-storage-cloudinary';
 import authRoutes from './routes/auth.js';
 import userRoutes from './routes/users.js';
 import imageRoutes from './routes/images.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 
 // Load environment variables
 dotenv.config();
@@ -78,12 +81,17 @@ app.listen(PORT, () => {
 // client/server/server.js
 app.use(cors({ origin: 'https://server-shopify-hscc.onrender.com', credentials: true }));
 
-const path = require('path');
+// app.use(express.static(path.join(__dirname, '../dist')));
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../dist/index.html'));
+// });
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(express.static(path.join(__dirname, '../dist')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
-
-
 
 export default app;

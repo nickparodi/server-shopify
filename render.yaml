@@ -5,7 +5,7 @@ services:
 
     # Build and install the frontend (Vite) and backend (Express)
     buildCommand: |
-      cd src && npm install && npm run build
+      npm install && npm run build
       cd ../server && npm install
 
     startCommand: node server/server.js
@@ -16,7 +16,7 @@ services:
     # Optional: Set environment variables for your app (e.g., MongoDB URI, JWT secret)
     envVars:
       - key: NODE_VERSION
-        value: ^3.0.1
+        value: 20.0
       - key: MONGODB_URI
         value: mongodb+srv://nickparodi:admin007@shirtshop.zarz3a.mongodb.net/?retryWrites=true&w=majority&appName=ShirtShop
       - key: JWT_SECRET

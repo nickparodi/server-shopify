@@ -32,7 +32,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const token = Cookies.get('token');
         
         if (token) {
-          const response = await axios.get('http://localhost:5000/api/users/me', {
+          const response = await axios.get('https://server-shopify-hscc.onrender.com/api/users/me', {
             headers: {
               Authorization: `Bearer ${token}`
             }
@@ -56,7 +56,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setLoading(true);
       setError(null);
       
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://server-shopify-hscc.onrender.com/api/auth/login', {
         email,
         password
       });
@@ -83,7 +83,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setLoading(true);
       setError(null);
       
-      await axios.post('http://localhost:5000/api/auth/signup', {
+      await axios.post('https://server-shopify-hscc.onrender.com/api/auth/signup', {
         name,
         email,
         password

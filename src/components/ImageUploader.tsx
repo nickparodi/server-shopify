@@ -66,7 +66,7 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onClose, onImageUploaded 
       formData.append('caption', caption);
       
       // Upload to server
-      const response = await axios.post('http://localhost:5000/api/images/upload', formData, {
+      const response = await axios.post('https://server-shopify-hscc.onrender.com/api/images/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

@@ -28,7 +28,7 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/images');
+        const response = await axios.get('https://server-shopify-hscc.onrender.com/api/images');
         setImages(response.data);
       } catch (error) {
         console.error('Error fetching images:', error);
@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
 
   const handleDeleteImage = async (imageId: string) => {
     try {
-      await axios.delete(`http://localhost:5000/api/images/${imageId}`);
+      await axios.delete(`https://server-shopify-hscc.onrender.com/api/images/${imageId}`);
       setImages((prevImages) => prevImages.filter(image => image._id !== imageId));
     } catch (error) {
       console.error('Error deleting image:', error);

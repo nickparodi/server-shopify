@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Asset Manager</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/dashboard.css">
+</head>
+<body>
+  <div class="shop-custom-dashboard">
+    <!-- Header -->
+    <header class="shop-custom-dashboard-header">
+      <div class="shop-custom-container shop-custom-flex shop-custom-justify-between shop-custom-items-center">
+        <a href="/" class="shop-custom-landing-logo">Asset Manager</a>
+        
+        <div class="shop-custom-dashboard-user">
+          <div class="shop-custom-dashboard-user-info">
+            <div id="shop-custom-user-name" class="shop-custom-dashboard-user-name">User</div>
+            <div id="shop-custom-user-email" class="shop-custom-dashboard-user-email">user@example.com</div>
+          </div>
+          
+          <div id="shop-custom-user-avatar" class="shop-custom-dashboard-avatar">U</div>
+          
+          <button id="shop-custom-logout-btn" class="shop-custom-btn shop-custom-btn-outline shop-custom-ml-3">
+            Logout
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="shop-custom-dashboard-content">
+      <div class="shop-custom-container">
+        <!-- Title and Upload Button -->
+        <div class="shop-custom-dashboard-title">
+          <h1 class="shop-custom-h1">My Assets</h1>
+          <button id="shop-custom-upload-btn" class="shop-custom-btn shop-custom-btn-primary">
+            Upload New Asset
+          </button>
+        </div>
+        
+        <!-- Asset Grid -->
+        <div id="shop-custom-asset-grid" class="shop-custom-asset-grid">
+          <!-- Assets will be loaded here -->
+          <div class="shop-custom-empty-state">
+            <div class="shop-custom-empty-icon">📁</div>
+            <h3 class="shop-custom-empty-text">Loading your assets...</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Upload Modal -->
+    <div id="shop-custom-upload-modal" class="shop-custom-modal-backdrop">
+      <div class="shop-custom-modal">
+        <div class="shop-custom-modal-header">
+          <h2 class="shop-custom-modal-title">Upload New Asset</h2>
+          <button id="shop-custom-modal-close" class="shop-custom-modal-close">&times;</button>
+        </div>
+        
+        <div class="shop-custom-modal-body">
+          <form id="shop-custom-upload-form">
+            <!-- File Upload -->
+            <div class="shop-custom-form-group">
+              <label class="shop-custom-label">File</label>
+              <div id="shop-custom-file-drop" class="shop-custom-file-upload">
+                <div class="shop-custom-file-upload-icon">📤</div>
+                <p>Drag and drop a file here, or click to select</p>
+                <p class="shop-custom-text-sm shop-custom-mt-2">Supported formats: PNG, JPG, SVG, JSON</p>
+              </div>
+              <input type="file" id="shop-custom-file-input" style="display: none;" accept=".png,.jpg,.jpeg,.svg,.json">
+              <div id="shop-custom-file-preview"></div>
+            </div>
+            
+            <!-- Asset Details -->
+            <div class="shop-custom-form-group">
+              <label for="shop-custom-asset-name" class="shop-custom-label">Name</label>
+              <input type="text" id="shop-custom-asset-name" class="shop-custom-input" placeholder="Asset name">
+            </div>
+            
+            <div class="shop-custom-form-group">
+              <label for="shop-custom-asset-description" class="shop-custom-label">Description</label>
+              <textarea id="shop-custom-asset-description" class="shop-custom-textarea" placeholder="Asset description"></textarea>
+            </div>
+            
+            <div class="shop-custom-form-group">
+              <label for="shop-custom-asset-type" class="shop-custom-label">Asset Type</label>
+              <select id="shop-custom-asset-type" class="shop-custom-select">
+                <option value="image">Image</option>
+                <option value="mockup">Mockup</option>
+                <option value="json">JSON Data</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <!-- Product Metadata -->
+            <h3 class="shop-custom-h4 shop-custom-mt-4 shop-custom-mb-3">Product Metadata</h3>
+            
+            <div class="shop-custom-form-group">
+              <label for="shop-custom-product-type" class="shop-custom-label">Product Type</label>
+              <input type="text" id="shop-custom-product-type" class="shop-custom-input" placeholder="T-shirt, Mug, Poster, etc.">
+            </div>
+            
+            <div class="shop-custom-form-group">
+              <label for="shop-custom-sizes" class="shop-custom-label">Available Sizes</label>
+              <input type="text" id="shop-custom-sizes" class="shop-custom-input" placeholder="S, M, L, XL (comma separated)">
+            </div>
+            
+            <div class="shop-custom-form-group">
+              <label for="shop-custom-colors" class="shop-custom-label">Available Colors</label>
+              <input type="text" id="shop-custom-colors" class="shop-custom-input" placeholder="Red, Blue, Green (comma separated)">
+            </div>
+          </form>
+        </div>
+        
+        <div class="shop-custom-modal-footer">
+          <button id="shop-custom-cancel-upload" class="shop-custom-btn shop-custom-btn-outline">Cancel</button>
+          <button id="shop-custom-submit-upload" type="submit" form="shop-custom-upload-form" class="shop-custom-btn shop-custom-btn-primary">Upload</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="/assets/js/dashboard.js"></script>
+</body>
+</html>

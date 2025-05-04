@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Asset Manager</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/auth.css">
+</head>
+<body>
+  <div class="shop-custom-auth-container">
+    <div class="shop-custom-auth-card">
+      <div class="shop-custom-auth-header">
+        <h1 class="shop-custom-h2">Create Account</h1>
+        <p>Sign up to start managing your assets</p>
+      </div>
+      
+      <div class="shop-custom-auth-form">
+        <div class="shop-custom-auth-error"></div>
+        <div class="shop-custom-auth-success"></div>
+        
+        <!-- Login Form (initially hidden) -->
+        <form id="shop-custom-login-form" class="shop-custom-auth-form-transition">
+          <div class="shop-custom-form-group">
+            <label for="shop-custom-login-email" class="shop-custom-label">Email</label>
+            <input 
+              type="email" 
+              id="shop-custom-login-email" 
+              class="shop-custom-input" 
+              placeholder="Enter your email"
+              required
+            >
+          </div>
+          
+          <div class="shop-custom-form-group">
+            <label for="shop-custom-login-password" class="shop-custom-label">Password</label>
+            <input 
+              type="password" 
+              id="shop-custom-login-password" 
+              class="shop-custom-input" 
+              placeholder="Enter your password"
+              required
+            >
+          </div>
+          
+          <button 
+            type="submit" 
+            id="shop-custom-login-btn"
+            class="shop-custom-btn shop-custom-btn-primary shop-custom-w-full shop-custom-mt-3"
+          >
+            Login
+          </button>
+        </form>
+        
+        <!-- Signup Form -->
+        <form id="shop-custom-signup-form" class="shop-custom-auth-form-transition">
+          <div class="shop-custom-form-group">
+            <label for="shop-custom-signup-username" class="shop-custom-label">Username</label>
+            <input 
+              type="text" 
+              id="shop-custom-signup-username" 
+              class="shop-custom-input" 
+              placeholder="Choose a username"
+              required
+            >
+          </div>
+          
+          <div class="shop-custom-form-group">
+            <label for="shop-custom-signup-email" class="shop-custom-label">Email</label>
+            <input 
+              type="email" 
+              id="shop-custom-signup-email" 
+              class="shop-custom-input" 
+              placeholder="Enter your email"
+              required
+            >
+          </div>
+          
+          <div class="shop-custom-form-group">
+            <label for="shop-custom-signup-password" class="shop-custom-label">Password</label>
+            <input 
+              type="password" 
+              id="shop-custom-signup-password" 
+              class="shop-custom-input" 
+              placeholder="Choose a password"
+              required
+            >
+          </div>
+          
+          <div class="shop-custom-form-group">
+            <label for="shop-custom-signup-confirm-password" class="shop-custom-label">Confirm Password</label>
+            <input 
+              type="password" 
+              id="shop-custom-signup-confirm-password" 
+              class="shop-custom-input" 
+              placeholder="Confirm your password"
+              required
+            >
+          </div>
+          
+          <button 
+            type="submit" 
+            id="shop-custom-signup-btn"
+            class="shop-custom-btn shop-custom-btn-primary shop-custom-w-full shop-custom-mt-3"
+          >
+            Create Account
+          </button>
+        </form>
+      </div>
+      
+      <div class="shop-custom-auth-footer">
+        <p id="shop-custom-signup-footer">
+          Already have an account? <a href="#" class="shop-custom-auth-link" id="shop-custom-login-link">Login</a>
+        </p>
+        <p id="shop-custom-login-footer" style="display: none;">
+          Don't have an account? <a href="#" class="shop-custom-auth-link" id="shop-custom-signup-link">Sign up</a>
+        </p>
+        <p class="shop-custom-mt-2">
+          <a href="/" class="shop-custom-auth-link">Back to Home</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="/assets/js/auth.js"></script>
+</body>
+</html>

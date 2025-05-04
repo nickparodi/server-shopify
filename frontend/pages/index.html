@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Manager</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .shop-custom-landing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .shop-custom-landing-header {
+      background-color: white;
+      box-shadow: var(--shop-custom-shadow-sm);
+      padding: var(--shop-custom-space-4);
+    }
+    
+    .shop-custom-landing-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .shop-custom-landing-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--shop-custom-primary);
+    }
+    
+    .shop-custom-landing-actions {
+      display: flex;
+      gap: var(--shop-custom-space-2);
+    }
+    
+    .shop-custom-landing-hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--shop-custom-space-6);
+      background: linear-gradient(135deg, var(--shop-custom-primary-light) 0%, var(--shop-custom-secondary-light) 100%);
+      color: white;
+    }
+    
+    .shop-custom-landing-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: var(--shop-custom-space-3);
+      line-height: 1.2;
+    }
+    
+    .shop-custom-landing-subtitle {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin-bottom: var(--shop-custom-space-5);
+    }
+    
+    .shop-custom-landing-cta {
+      display: flex;
+      gap: var(--shop-custom-space-3);
+    }
+    
+    .shop-custom-landing-features {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: var(--shop-custom-space-4);
+      padding: var(--shop-custom-space-6);
+      background-color: white;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .shop-custom-landing-feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: var(--shop-custom-space-4);
+      border-radius: var(--shop-custom-radius-lg);
+      background-color: var(--shop-custom-gray-50);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .shop-custom-landing-feature:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shop-custom-shadow-md);
+    }
+    
+    .shop-custom-landing-feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--shop-custom-space-2);
+      color: var(--shop-custom-primary);
+    }
+    
+    .shop-custom-landing-feature-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--shop-custom-space-2);
+      color: var(--shop-custom-gray-900);
+    }
+    
+    .shop-custom-landing-footer {
+      background-color: var(--shop-custom-gray-900);
+      color: white;
+      padding: var(--shop-custom-space-4);
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .shop-custom-landing-features {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shop-custom-landing">
+    <header class="shop-custom-landing-header">
+      <nav class="shop-custom-landing-nav">
+        <div class="shop-custom-landing-logo">Asset Manager</div>
+        <div class="shop-custom-landing-actions">
+          <a href="/pages/login.html" class="shop-custom-btn shop-custom-btn-outline">Login</a>
+          <a href="/pages/signup.html" class="shop-custom-btn shop-custom-btn-primary">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="shop-custom-landing-hero">
+        <h1 class="shop-custom-landing-title shop-custom-slideUp">Manage Your Digital Assets</h1>
+        <p class="shop-custom-landing-subtitle shop-custom-slideUp">
+          Upload, organize, and access your design assets from anywhere. Perfect for designers, marketers, and e-commerce businesses.
+        </p>
+        <div class="shop-custom-landing-cta shop-custom-slideUp">
+          <a href="/pages/signup.html" class="shop-custom-btn shop-custom-btn-accent">Get Started</a>
+          <a href="/pages/login.html" class="shop-custom-btn shop-custom-btn-outline" style="background-color: rgba(255,255,255,0.2); color: white; border-color: white;">Login</a>
+        </div>
+      </section>
+      
+      <section class="shop-custom-landing-features">
+        <div class="shop-custom-landing-feature shop-custom-fadeIn">
+          <div class="shop-custom-landing-feature-icon">📁</div>
+          <h3 class="shop-custom-landing-feature-title">Store Anywhere</h3>
+          <p>Access your assets from any device, anytime. No more lost files or version confusion.</p>
+        </div>
+        
+        <div class="shop-custom-landing-feature shop-custom-fadeIn" style="animation-delay: 0.1s;">
+          <div class="shop-custom-landing-feature-icon">🔄</div>
+          <h3 class="shop-custom-landing-feature-title">Seamless Integration</h3>
+          <p>Works perfectly with Shopify and other e-commerce platforms for a smooth workflow.</p>
+        </div>
+        
+        <div class="shop-custom-landing-feature shop-custom-fadeIn" style="animation-delay: 0.2s;">
+          <div class="shop-custom-landing-feature-icon">🔒</div>
+          <h3 class="shop-custom-landing-feature-title">Secure Storage</h3>
+          <p>Your assets are securely stored with enterprise-grade protection and backup.</p>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="shop-custom-landing-footer">
+      <p>&copy; 2025 Asset Manager. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Check if user is already logged in
+    document.addEventListener('DOMContentLoaded', () => {
+      const token = localStorage.getItem('userToken');
+      if (token) {
+        const getStartedBtn = document.querySelector('.shop-custom-landing-cta .shop-custom-btn-accent');
+        if (getStartedBtn) {
+          getStartedBtn.textContent = 'Go to Dashboard';
+          getStartedBtn.href = '/pages/dashboard.html';
+        }
+        
+        const loginBtn = document.querySelector('.shop-custom-landing-actions .shop-custom-btn-outline');
+        if (loginBtn) {
+          loginBtn.textContent = 'Dashboard';
+          loginBtn.href = '/pages/dashboard.html';
+        }
+        
+        const signupBtn = document.querySelector('.shop-custom-landing-actions .shop-custom-btn-primary');
+        if (signupBtn) {
+          signupBtn.textContent = 'Logout';
+          signupBtn.href = '#';
+          signupBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('userToken');
+            localStorage.removeItem('userData');
+            window.location.reload();
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* Auth Pages Specific Styles */
+.shop-custom-auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, var(--shop-custom-primary-light), var(--shop-custom-secondary-light));
+}
+
+.shop-custom-auth-card {
+  background-color: white;
+  border-radius: var(--shop-custom-radius-lg);
+  box-shadow: var(--shop-custom-shadow-xl);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  animation: shop-custom-fadeIn 0.5s ease-out;
+}
+
+.shop-custom-auth-header {
+  padding: var(--shop-custom-space-4);
+  text-align: center;
+  border-bottom: 1px solid var(--shop-custom-gray-200);
+}
+
+.shop-custom-auth-logo {
+  height: 80px;
+  margin-bottom: var(--shop-custom-space-3);
+}
+
+.shop-custom-auth-form {
+  padding: var(--shop-custom-space-4);
+}
+
+.shop-custom-auth-footer {
+  padding: var(--shop-custom-space-3);
+  text-align: center;
+  border-top: 1px solid var(--shop-custom-gray-200);
+  background-color: var(--shop-custom-gray-50);
+}
+
+.shop-custom-auth-link {
+  color: var(--shop-custom-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.shop-custom-auth-link:hover {
+  color: var(--shop-custom-primary-dark);
+  text-decoration: underline;
+}
+
+.shop-custom-auth-error {
+  background-color: var(--shop-custom-error-light);
+  color: var(--shop-custom-error-dark);
+  padding: var(--shop-custom-space-2) var(--shop-custom-space-3);
+  border-radius: var(--shop-custom-radius-md);
+  margin-bottom: var(--shop-custom-space-3);
+  display: none;
+}
+
+.shop-custom-auth-success {
+  background-color: var(--shop-custom-success-light);
+  color: var(--shop-custom-success-dark);
+  padding: var(--shop-custom-space-2) var(--shop-custom-space-3);
+  border-radius: var(--shop-custom-radius-md);
+  margin-bottom: var(--shop-custom-space-3);
+  display: none;
+}
+
+/* Animations */
+.shop-custom-auth-form-transition {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.shop-custom-auth-form-hidden {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.shop-custom-auth-form-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes shop-custom-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.shop-custom-auth-shake {
+  animation: shop-custom-shake 0.4s ease-in-out;
+}
